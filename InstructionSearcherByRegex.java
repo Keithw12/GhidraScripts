@@ -22,6 +22,7 @@ public class InstructionSearcherByRegex extends GhidraScript {
 						: currentSelection;
 		
 		String regexstr = askString("Addresses to search by regex", "Please enter your regex:");
+		regexstr = regexstr.toLowerCase();
 		Pattern pattern = Pattern.compile(regexstr);
 
 		ArrayList<Address> matchingAddressList = new ArrayList<Address>();
